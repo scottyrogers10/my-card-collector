@@ -1,0 +1,16 @@
+{
+  "name": "my-card-collector",
+  "version": "1.0.0",
+  "description": "A mobile app that allows you to view and share sport card collections.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Scotty Rogers",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.2"
+  }
+}
