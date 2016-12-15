@@ -1,0 +1,42 @@
+﻿<div gem-scheduler-sidebar-day-thumbnail controller="components.gem.scheduler.SidebarDayThumbnail">
+    <style component="css-material-icons"></style>
+    <style component="css-helpers"></style>
+    <style>
+        [gem-scheduler-sidebar-day-thumbnail] {
+            position: relative;
+            font-size: 12px;
+        }
+
+        [gem-scheduler-sidebar-day-thumbnail].default-date{
+            background-color: #fff;
+            color: #666;
+        }
+
+        [gem-scheduler-sidebar-day-thumbnail].selected-date{
+            background-color: #1966af;
+            color: #fff;
+        }
+
+        [gem-scheduler-sidebar-day-thumbnail].current-date{
+            background-color: #379eff;
+            color: #fff;
+        }
+
+        [gem-scheduler-sidebar-day-thumbnail].hover-date{
+            background-color: #4d93d6 !important;
+            color: #fff !important;
+            cursor: pointer;
+        }
+
+        [gem-scheduler-sidebar-day-thumbnail-date] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <div gem-scheduler-sidebar-day-thumbnail-date>
+        <div tag="day-of-the-month"></div>
+    </div>
+</div>

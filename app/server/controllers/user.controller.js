@@ -51,10 +51,11 @@ var registerAsync = function(req, res) {
                     status: 200,
                     token: token
                 });
-            }).catch(function() {
+            }).catch(function(err) {
                 reject({
                     status: 500,
-                    message: "Server ERROR while trying to save to the database."
+                    message: "Server ERROR while trying to save to the database.",
+                    err: err
                 });
             });
         }

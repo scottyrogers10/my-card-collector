@@ -1,0 +1,100 @@
+﻿<div card-feed-list-item controller="app.components.layouts.CardFeedListItem">
+    <style component="css-helpers"></style>
+    <style>
+        [card-feed-list-item] {
+            position: relative;
+            width: 100%;
+        }
+
+        [card-feed-list-item-container] {
+            position: absolute;
+            top: 16px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            box-shadow: 0 1px 8px rgba(0,0,0,.3);
+        }
+
+        [card-feed-list-item-header] {
+            height: 80px;
+            line-height: 80px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        [card-feed-list-item-header-profile-image] {
+            position: absolute;
+            top: 18px;
+            left: 16px;
+            height: 44px;
+            width: 44px;
+            background-size: contain;
+        }
+
+        [card-feed-list-item-header-profile-name] {
+            position: absolute;
+            left: 74px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #757575;
+        }
+
+        [card-feed-list-item-picture] {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background-color: #fff;
+            height: 510px;
+        }
+
+            [card-feed-list-item-picture] > img {
+                height: 100%;
+                width: 100%;
+            }
+
+        [card-feed-list-item-info] {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 70px;
+        }
+
+        [card-feed-list-item-series-info] {
+            position: absolute;
+            left: 16px;
+            top: 13px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #1e88e5;
+        }
+
+        [card-feed-list-item-player-info] {
+            position: absolute;
+            left: 16px;
+            right: 10px;
+            top: 33px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #757575;
+        }
+    </style>
+    <div card-feed-list-item-container>
+        <div card-feed-list-item-header>
+            <div card-feed-list-item-header-profile-image tag="profile-image"></div>
+            <div card-feed-list-item-header-profile-name tag="profile-name"></div>
+        </div>
+        <div card-feed-list-item-picture tag="card-picture-height">
+            <img tag="card-image" />
+        </div>
+        <div card-feed-list-item-info>
+            <div card-feed-list-item-series-info tag="set-name"></div>
+            <div card-feed-list-item-player-info tag="player-name"></div>
+        </div>
+    </div>
+</div>

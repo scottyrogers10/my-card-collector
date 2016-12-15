@@ -1,0 +1,30 @@
+﻿<div home-state controller="app.components.states.HomeState">
+    <style component="css-helpers"></style>
+    <style component="css-material-icons"></style>
+    <style>
+        [home-state-main-content-container] {
+            position: absolute;
+            top: 56px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        [home-state-add-card-button] {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+        }
+    </style>
+    <div component="header" name="Home"></div>
+    <div home-state-main-content-container>
+        <div tag="card-feed-collection"
+             component="dynamic-list"
+             item-component="card-feed-list-item"
+             feedback-height="50"
+             batch-size="10"
+             class="absolute-fill-parent">
+        </div>
+        <div home-state-add-card-button component="floating-action-button" tag="add-card-button" icon="&#xE145;"></div>
+    </div>
+</div>

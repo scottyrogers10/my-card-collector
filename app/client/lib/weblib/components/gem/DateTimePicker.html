@@ -1,0 +1,295 @@
+﻿<div gem-date-time-picker controller="components.gem.DateTimePicker">
+    <style component="./Theme.html">
+    </style>
+    <style>
+        [gem-date-time-picker] {
+            position: relative;
+            padding: 15px;
+        }
+
+        [gem-date-time-picker-actions] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 35px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        [gem-date-time-picker-month] {
+            height: 35px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        [gem-date-time-picker-year] {
+            height: 35px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 15px;
+        }
+
+        [gem-date-time-picker-display] {
+            position: absolute;
+            top: 105px;
+            left: 0;
+            right: 0;
+            box-sizing: border-box;
+        }
+
+        [gem-date-time-picker-display-header] {
+            position: relative;
+        }
+
+        .calendar-square {
+            width: 25px;
+            height: 25px;
+            font-size: 12px;
+            text-transform: uppercase;
+            display: inline-block;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 25px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid rgba(0,0,0,0);
+        }
+
+            .calendar-square:hover {
+                border: 1px solid #999;
+            }
+
+            .calendar-square.selected {
+                background-color: #0094ff;
+                color: #fff;
+            }
+
+        [gem-date-time-picker-header] {
+            height: 25px;
+            line-height: 25px;
+            background-color: #999;
+            color: #fff;
+        }
+
+        [gem-date-time-picker-week] {
+            position: relative;
+            width: 100%;
+            height: 25px;
+        }
+
+            [gem-date-time-picker-week] > * {
+                position: absolute;
+            }
+
+                [gem-date-time-picker-week] > *:nth-child(1) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                [gem-date-time-picker-week] > *:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    left: 14%;
+                }
+
+                [gem-date-time-picker-week] > *:nth-child(3) {
+                    position: absolute;
+                    top: 0;
+                    left: 29%;
+                }
+
+                [gem-date-time-picker-week] > *:nth-child(4) {
+                    position: absolute;
+                    top: 0;
+                    left: 43%;
+                }
+
+                [gem-date-time-picker-week] > *:nth-child(5) {
+                    position: absolute;
+                    top: 0;
+                    left: 58%;
+                }
+
+                [gem-date-time-picker-week] > *:nth-child(6) {
+                    position: absolute;
+                    top: 0;
+                    left: 72%;
+                }
+
+                [gem-date-time-picker-week] > *:nth-child(7) {
+                    position: absolute;
+                    top: 0;
+                    left: 87%;
+                }
+
+        [gem-date-time-picker-time-container] {
+            position: absolute;
+            top: 297px;
+            height: 40px;
+            left: 0;
+            right: 0;
+            box-sizing: border-box;
+        }
+
+        [gem-date-time-picker-hour] {
+            position: absolute;
+            left: 0;
+            height: 40px;
+            width: 30%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        [gem-date-time-picker-colon] {
+            position: absolute;
+            left: 30%;
+            width: 10%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 22px;
+        }
+
+        [gem-date-time-picker-minute] {
+            position: absolute;
+            left: 40%;
+            height: 40px;
+            width: 30%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        [gem-date-time-picker-time-period] {
+            position: absolute;
+            left: 74%;
+            height: 40px;
+            width: 26%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
+    <div style="position:relative;width:100%;height:100%;">
+        <div gem-date-time-picker-actions>
+            <div gem-date-time-picker-month>
+                <select tag="month" class="gem-input" style="width:100%;">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+            </div>
+            <div gem-date-time-picker-year>
+                <input tag="year" class="gem-input" style="width:100%;" />
+            </div>
+        </div>
+        <div gem-date-time-picker-display class="gem-inset gem-tab-content">
+            <div gem-date-time-picker-header gem-date-time-picker-week>
+                <div class="calendar-square">S</div>
+                <div class="calendar-square">M</div>
+                <div class="calendar-square">T</div>
+                <div class="calendar-square">W</div>
+                <div class="calendar-square">T</div>
+                <div class="calendar-square">F</div>
+                <div class="calendar-square">S</div>
+            </div>
+            <div tag="dates">
+                <div gem-date-time-picker-week tag="first-week">
+                    <div tag="0" class="calendar-square"></div>
+                    <div tag="1" class="calendar-square"></div>
+                    <div tag="2" class="calendar-square"></div>
+                    <div tag="3" class="calendar-square"></div>
+                    <div tag="4" class="calendar-square"></div>
+                    <div tag="5" class="calendar-square"></div>
+                    <div tag="6" class="calendar-square"></div>
+                </div>
+                <div gem-date-time-picker-week tag="second-week">
+                    <div tag="7" class="calendar-square"></div>
+                    <div tag="8" class="calendar-square"></div>
+                    <div tag="9" class="calendar-square"></div>
+                    <div tag="10" class="calendar-square"></div>
+                    <div tag="11" class="calendar-square"></div>
+                    <div tag="12" class="calendar-square"></div>
+                    <div tag="13" class="calendar-square"></div>
+                </div>
+                <div gem-date-time-picker-week tag="third-week">
+                    <div tag="14" class="calendar-square"></div>
+                    <div tag="15" class="calendar-square"></div>
+                    <div tag="16" class="calendar-square"></div>
+                    <div tag="17" class="calendar-square"></div>
+                    <div tag="18" class="calendar-square"></div>
+                    <div tag="19" class="calendar-square"></div>
+                    <div tag="20" class="calendar-square"></div>
+                </div>
+                <div gem-date-time-picker-week tag="fourth-week">
+                    <div tag="21" class="calendar-square"></div>
+                    <div tag="22" class="calendar-square"></div>
+                    <div tag="23" class="calendar-square"></div>
+                    <div tag="24" class="calendar-square"></div>
+                    <div tag="25" class="calendar-square"></div>
+                    <div tag="26" class="calendar-square"></div>
+                    <div tag="27" class="calendar-square"></div>
+                </div>
+                <div gem-date-time-picker-week tag="fifth-week">
+                    <div tag="28" class="calendar-square"></div>
+                    <div tag="29" class="calendar-square"></div>
+                    <div tag="30" class="calendar-square"></div>
+                    <div tag="31" class="calendar-square"></div>
+                    <div tag="32" class="calendar-square"></div>
+                    <div tag="33" class="calendar-square"></div>
+                    <div tag="34" class="calendar-square"></div>
+                </div>
+                <div gem-date-time-picker-week tag="six-week">
+                    <div tag="35" class="calendar-square"></div>
+                    <div tag="36" class="calendar-square"></div>
+                    <div tag="37" class="calendar-square"></div>
+                    <div tag="38" class="calendar-square"></div>
+                    <div tag="39" class="calendar-square"></div>
+                    <div tag="40" class="calendar-square"></div>
+                    <div tag="41" class="calendar-square"></div>
+                </div>
+            </div>
+        </div>
+        <div gem-date-time-picker-time-container>
+            <div gem-date-time-picker-hour>
+                <select tag="hour" class="gem-input" style="width: 100%;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="0">12</option>
+                </select>
+            </div>
+            <div gem-date-time-picker-colon>:</div>
+            <div gem-date-time-picker-minute>
+                <select tag="minute" class="gem-input" style="width: 100%;">
+                    <option value="0">00</option>
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                </select>
+            </div>
+            <div gem-date-time-picker-time-period>
+                <select tag="time-period" class="gem-input" style="width: 100%;">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+        </div>
+        <button style="position:absolute;bottom:0;left:0;width:100%;" class="gem-button" tag="select">Select</button>
+    </div>
+</div>

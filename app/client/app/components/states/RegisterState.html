@@ -1,0 +1,126 @@
+<div register-state controller="app.components.states.RegisterState">
+<style component="css-helpers"></style>
+<style>
+    [register-state-container] {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 320px;
+        margin-top: -185px;
+    }
+
+    [register-state-header] {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        height: 35px;
+        width: 100%;
+        line-height: 35px;
+        font-size: 24px;
+        color: #616161;
+    }
+
+    [register-state-form-login-container] {
+        position: absolute;
+        top: 55px;
+        left: 0;
+        right: 0;
+        height: 105px;
+    }
+
+    [register-state-username-input] {
+        position: absolute;
+        padding: 8px 14px;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        height: 45px;
+        width: 260px;
+        border: 1px solid #eee;
+        border-radius: 2px;
+    }
+
+    [register-state-email-input] {
+        position: absolute;
+        padding: 8px 14px;
+        top: 60;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        height: 45px;
+        width: 260px;
+        border: 1px solid #eee;
+        border-radius: 2px;
+    }
+
+    [register-state-password-input] {
+        position: absolute;
+        padding: 8px 14px;
+        top: 120px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        height: 45px;
+        width: 260px;
+        border: 1px solid #eee;
+        border-radius: 2px;
+    }
+
+    [register-state-sign-up-btn] {
+        position: absolute;
+        top: 240px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        height: 45px;
+        line-height: 45px;
+        width: 275px;
+        background-color: #388E3C;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+    }
+
+    [register-state-login-account-btn] {
+        position: absolute;
+        top: 300px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 275px;
+        height: 20px;
+        line-height: 20px;
+        color: #616161;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    [register-state-login-account-btn-span] {
+        font-weight: 500;
+        color: #4CAF50;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        color: #616161;
+    }
+
+    input:focus {
+        outline: none;
+    }
+</style>
+<div register-state-container>
+    <div register-state-header>Create Account</div>
+    <div register-state-form-login-container>
+        <input register-state-username-input tag="username-input" placeholder="Username" />
+        <input register-state-email-input tag="email-input" placeholder="Email" />
+        <input register-state-password-input tag="password-input" placeholder="Password" type="password" />
+    </div>
+    <div register-state-sign-up-btn tag="sign-up-btn">Sign Up</div>
+    <div register-state-login-account-btn tag="login-account-btn">Already a member? <span register-state-login-account-btn-span>Login to Account</span></div>
+</div>
+</div>

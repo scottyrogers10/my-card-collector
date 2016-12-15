@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+    <title>My Card Collector</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1 user-scalable=0" />
+    <link href="./lib/weblib/css/reset-min.css" rel="stylesheet" />
+    <link href="./lib/weblib/css/material.css" rel="stylesheet" />
+    <script type="components/config" type="text/javascript" src="./lib/weblib/components/components.json" root="lib/weblib/components/"></script>
+    <script type="components/config" type="text/javascript" src="./app/components/components.json" root="app/components/"></script>
+    <style component="css-helpers"></style>
+    <style>
+        html, body {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div component="app-main" class="absolute-fill-parent overflow-hidden"></div>
+    <script type="text/javascript" src="./lib/weblib/lib/BASE/BASE.js"></script>
+    <script type="text/javascript">
+        BASE.require.loader.setRoot("lib/weblib/lib/BASE/");
+        BASE.require.loader.setNamespace("components", "lib/weblib/components");
+        BASE.require.loader.setNamespace("app", "app/");
+        BASE.require([
+            "BASE.web.ComponentsDocument"
+        ], function () {
+            BASE.web.components = new BASE.web.ComponentsDocument(document, {
+                hostUri: "http://127.0.0.1:3000"
+            });
+        });
+    </script>
+</body>
+</html>

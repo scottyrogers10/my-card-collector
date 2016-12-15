@@ -1,0 +1,32 @@
+<div app-main controller="app.components.AppMain">
+    <style component="css-helpers"></style>
+    <style component="css-material-icons"></style>
+    <style>
+        [app-main-content] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        [app-main-hamburger-menu] {
+            height: 100%;
+            width: 280px;
+            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4);
+            background-color: #fff;
+            overflow: auto;
+        }
+    </style>
+    <div tag="two-column-left-overlay" component="two-column-left-overlay">
+        <div app-main-hamburger-menu tag="hamburger-menu" component="hamburger-menu"></div>
+        <div app-main-content>
+            <div tag="app-main-state-manager" component="absolute-state-manager" class="fill-parent">
+                <div name="login-state" component="login-state" class="absolute-fill-parent"></div>
+                <div name="register-state" component="register-state" class="absolute-fill-parent"></div>
+                <div name="home-state" component="home-state" class="absolute-fill-parent"></div>
+                <div name="settings-state" component="settings-state" class="absolute-fill-parent"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿<div gem-scheduler-hour-thumbnail controller="components.gem.scheduler.HourThumbnail">
+    <style component="css-material-icons"></style>
+    <style component="css-helpers"></style>
+    <style>
+        [gem-scheduler-hour-thumbnail] {
+            position: relative;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+            [gem-scheduler-hour-thumbnail] .event-container {
+                position: absolute;
+                padding: 6px 0;
+                height: 44px;
+                line-height: 32px;
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            [gem-scheduler-hour-thumbnail] .event {
+                position: relative;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                padding: 0 12px;
+                box-sizing: border-box;
+                text-align: center;
+                z-index: 1;
+            }
+
+            [gem-scheduler-hour-thumbnail] .delete-button {
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 14px;
+                color: #fff;
+                padding: 0 4px;
+            }
+
+            [gem-scheduler-hour-thumbnail] .delete-button-hover {
+                background-color: rgba(0,0,0,.20);
+            }
+
+            [gem-scheduler-hour-thumbnail] .hover-event {
+                background-color: rgba(0,0,0,.20);
+            }
+    </style>
+</div>

@@ -1,0 +1,45 @@
+<div header controller="app.components.material.Header">
+    <style component="css-helpers"></style>
+    <style>
+        [header] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            line-height: 56px;
+            background-color: #1e88e5;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+            z-index: 2;
+        }
+
+        [header-menu-button] {
+            position: absolute;
+            top: 0;
+            font-size: 24px;
+            width: 62px;
+            color: #fff;
+            text-align: center;
+        }
+
+        [header-back-button] {
+            position: absolute;
+            top: 0;
+            font-size: 24px;
+            width: 62px;
+            color: #fff;
+            text-align: center;
+        }
+
+        [header-state-name] {
+            position: absolute;
+            left: 62px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    </style>
+    <i header-menu-button tag="menu-button" class="material-icons" unselectable>&#xE5D2;</i>
+    <i header-back-button tag="back-button" class="material-icons hide" unselectable>&#xE5C4;</i>
+    <div header-state-name tag="state-name">Home</div>
+</div>

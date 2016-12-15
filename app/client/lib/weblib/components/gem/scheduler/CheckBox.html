@@ -1,0 +1,45 @@
+﻿<div checkbox controller="components.gem.scheduler.Checkbox" unselectable>
+    <style component="css-helpers"></style>
+    <style component="css-material-icons"></style>
+    <style>
+        [checkbox] {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        [checkbox-unchecked-icon] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+        }
+
+        [checkbox-checked-icon] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+        }
+
+        [checkbox-label] {
+            position: absolute;
+            top: 0;
+            left: 30px;
+            color: #5b5b5b;
+            font-size: 15px;
+        }
+
+        [checkbox] .scale-zero {
+            transform: scale(0,0) !important;
+        }
+
+        [checkbox] .full-opaque {
+            opacity: 1 !important;
+        }
+    </style>
+    <i checkbox-unchecked-icon tag="unchecked-icon" class="material-icons">&#xE835;</i>
+    <i checkbox-checked-icon tag="checked-icon" class="material-icons">&#xE834;</i>
+    <div checkbox-label tag="label"></div>
+</div>

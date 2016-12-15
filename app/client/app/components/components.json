@@ -1,0 +1,14 @@
+{
+    "aliases":{
+        "app-main": "AppMain.html",
+        "login-state":  "states/LoginState.html",
+        "register-state":  "states/RegisterState.html",
+        "home-state":  "states/HomeState.html",
+        "settings-state":  "states/SettingsState.html",
+        "card-feed-list-item":  "layouts/CardFeedListItem.html",
+        "hamburger-menu": "layouts/HamburgerMenu.html",
+        "floating-action-button":  "material/FloatingActionButton.html",
+        "text-input":  "material/TextInput.html",
+        "header": "material/Header.html"
+	}
+}

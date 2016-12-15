@@ -1,0 +1,42 @@
+﻿<div date-time-input controller="components.gem.inputs.DateTime">
+    <style component="css-material-icons"></style>
+    <style>
+        [date-time-input] {
+            box-sizing: border-box;
+        }
+
+        div[date-time-input-input] {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            right: 125px;
+            bottom: 0;
+        }
+
+            div[date-time-input-input] > input {
+                line-height: 40px;
+                border-radius: 0;
+                border-right: 0;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                cursor: pointer;
+            }
+
+        [date-time-input-change].gem-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 125px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    </style>
+    <div tag="label"></div>
+    <div style="overflow: hidden; position: relative; border: 0;" class="gem-input">
+        <div date-time-input-input>
+            <input tag="input" class="gem-input fill-parent" />
+        </div>
+        <button tag="change" date-time-input-change class="gem-button">Change</button>
+    </div>
+    <div tag="error-message" class="gem-input-error-message"></div>
+</div>

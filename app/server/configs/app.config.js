@@ -1,7 +1,11 @@
 var express = require("express");
 var mongoose = require("mongoose");
+var passport = require("passport");
+var bodyParser = require("body-parser");
+var path = require("path");
 var env = require("./environment/env");
 var userRouter = require("../routes/user.router");
+var cardRouter = require("../routes/card.router");
 
 var app = express();
 
@@ -27,7 +31,20 @@ var setMongoDB = function () {
 
 var setRoutes = function () {
     require("./passport.config");
+
+    app.use(passport.initialize());
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
+    app.use(express.static(path.join(__dirname, "../../client")));
+    app.use(function (req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Methods", "GET, PATCH, POST, DELETE");
+        res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        next();
+    });
+
     app.use("/user", userRouter);
+    app.use("/card", cardRouter);
 };
 
 module.exports.init = function () {

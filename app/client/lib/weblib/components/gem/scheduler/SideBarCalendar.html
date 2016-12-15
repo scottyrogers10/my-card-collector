@@ -1,0 +1,184 @@
+﻿<div gem-scheduler-sidebar-calendar controller="components.gem.scheduler.SidebarCalendar">
+    <style component="./../Theme.html"></style>
+    <style component="css-material-icons"></style>
+    <style>
+        [gem-scheduler-sidebar-calendar] {
+            position: relative;
+            cursor: default;
+        }
+
+        [gem-scheduler-sidebar-calendar-display] {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 16px;
+            box-sizing: border-box;
+        }
+
+        [gem-scheduler-sidebar-calendar-header] {
+            height: 34px;
+            line-height: 34px;
+            color: #5b5b5b;
+        }
+
+        [gem-scheduler-sidebar-calendar-month-and-year] {
+            position: absolute;
+            top: 0;
+            left: 8px;
+            font-size: 17px;
+        }
+
+        [gem-scheduler-sidebar-calendar-month-nav-container] {
+            position: absolute;
+            top: 0;
+            right: 7px;
+            font-size: 21px;
+        }
+
+        [gem-scheduler-sidebar-calendar-week] {
+            position: relative;
+            width: 100%;
+            left: 0;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+            [gem-scheduler-sidebar-calendar-week] > * {
+                position: absolute;
+                width: 14%;
+            }
+
+                [gem-scheduler-sidebar-calendar-week] > *:nth-child(1) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                [gem-scheduler-sidebar-calendar-week] > *:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    left: 14%;
+                }
+
+                [gem-scheduler-sidebar-calendar-week] > *:nth-child(3) {
+                    position: absolute;
+                    top: 0;
+                    left: 28%;
+                }
+
+                [gem-scheduler-sidebar-calendar-week] > *:nth-child(4) {
+                    position: absolute;
+                    top: 0;
+                    left: 42%;
+                }
+
+                [gem-scheduler-sidebar-calendar-week] > *:nth-child(5) {
+                    position: absolute;
+                    top: 0;
+                    left: 56%;
+                }
+
+                [gem-scheduler-sidebar-calendar-week] > *:nth-child(6) {
+                    position: absolute;
+                    top: 0;
+                    left: 70%;
+                }
+
+                [gem-scheduler-sidebar-calendar-week] > *:nth-child(7) {
+                    position: absolute;
+                    top: 0;
+                    left: 84%;
+                }
+
+        [gem-scheduler-sidebar-calendar] .calendar-square {
+            height: 30px;
+            line-height: 30px;
+            font-size: 13px;
+            display: inline-block;
+            box-sizing: border-box;
+            text-align: center;
+            color: #666;
+        }
+
+        [gem-scheduler-sidebar-calendar] .week {
+            padding-bottom: 3px;
+        }
+    </style>
+    <div gem-scheduler-sidebar-calendar-display>
+        <div gem-scheduler-sidebar-calendar-header>
+            <span gem-scheduler-sidebar-calendar-month-and-year tag="display-month-and-year"></span>
+            <div gem-scheduler-sidebar-calendar-month-nav-container>
+                <i tag="previous-month" class="material-icons" unselectable style="cursor: pointer;">&#xE314;</i>
+                <i tag="next-month" class="material-icons" unselectable style="cursor: pointer;">&#xE315;</i>
+            </div>
+        </div>
+
+        <div gem-scheduler-sidebar-calendar-week>
+            <div class="ellipsis">Su</div>
+            <div class="ellipsis">Mo</div>
+            <div class="ellipsis">Tu</div>
+            <div class="ellipsis">We</div>
+            <div class="ellipsis">Th</div>
+            <div class="ellipsis">Fr</div>
+            <div class="ellipsis">Sa</div>
+        </div>
+        <div gem-scheduler-sidebar-calendar-week tag="first-week" class="week">
+            <div tag="0" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="1" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="2" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="3" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="4" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="5" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="6" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+        </div>
+        <div gem-scheduler-sidebar-calendar-week tag="second-week" class="week">
+            <div tag="7" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="8" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="9" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="10" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="11" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="12" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="13" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+        </div>
+        <div gem-scheduler-sidebar-calendar-week tag="third-week" class="week">
+            <div tag="14" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="15" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="16" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="17" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="18" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="19" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="20" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+        </div>
+        <div gem-scheduler-sidebar-calendar-week tag="fourth-week" class="week">
+            <div tag="21" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="22" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="23" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="24" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="25" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="26" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="27" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+        </div>
+        <div gem-scheduler-sidebar-calendar-week tag="fifth-week" class="week">
+            <div tag="28" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="29" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="30" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="31" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="32" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="33" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="34" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+        </div>
+        <div gem-scheduler-sidebar-calendar-week tag="six-week" class="week">
+            <div tag="35" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="36" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="37" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="38" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="39" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="40" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+            <div tag="41" component="./SidebarDayThumbnail.html" class="calendar-square"></div>
+        </div>
+    </div>
+</div>

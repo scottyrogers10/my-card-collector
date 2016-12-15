@@ -1,0 +1,39 @@
+﻿<div text-input controller="app.components.material.TextInput" unselectable>
+    <style component="css-helpers"></style>
+    <style>
+        [text-input-label] {
+            font-size: 14px;
+            line-height: 22px;
+            color: #949494;
+        }
+
+        [text-input-input] {
+            border-bottom: 1px solid #eee;
+            width: 100%;
+            color: #424242;
+            font-size: 17px;
+            line-height: 35px;
+        }
+
+        [text-input-focused-line] {
+            position: relative;
+            bottom: 1px;
+            right: 0;
+            left: 0;
+            height: 2px;
+            transform: scaleX(0);
+        }
+
+        input {
+            border: none;
+            outline: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+    </style>
+    <div text-input-label tag="input-label"></div>
+    <input text-input-input tag="input" />
+    <div text-input-focused-line tag="focused-line"></div>
+</div>

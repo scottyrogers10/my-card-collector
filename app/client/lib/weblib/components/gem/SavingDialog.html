@@ -1,0 +1,96 @@
+﻿<div saving-dialog controller="components.gem.SavingDialog">
+    <style component="css-helpers"></style>
+    <style component="css-material-icons"></style>
+    <style>
+        [saving-dialog] {
+            position: relative;
+        }
+
+        [saving-dialog-icon] {
+            position: absolute;
+            color: #c60000;
+            font-size: 35px;
+        }
+
+        [saving-dialog-icon] {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 40px;
+            height: 40px;
+        }
+
+        [saving-dialog-error-title] {
+            position: absolute;
+            top: 15px;
+            left: 45px;
+            height: 40px;
+            right: 0;
+            line-height: 40px;
+            padding-left: 15px;
+            box-sizing: border-box;
+            color: rgba(0,0,0,0.5);
+            font-size:20px;
+            font-weight: bold;
+        }
+
+        [saving-dialog-error-message] {
+            position: absolute;
+            top: 55px;
+            left: 15px;
+            bottom: 65px;
+            right: 15px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 2px;
+            padding: 4px;
+            box-sizing: border-box;
+            overflow:scroll;
+        }
+
+        [saving-dialog-saving-message] {
+            color: rgba(0,0,0,0.5);
+            font-size:20px;
+            font-weight: bold;
+            text-align:center;
+            padding:15px;
+            box-sizing:border-box;
+        }
+
+         [saving-dialog-saved-message] {
+            color: rgba(0,0,0,0.5);
+            font-size:20px;
+            font-weight: bold;
+            text-align:center;
+            padding:15px;
+            box-sizing:border-box;
+        }
+
+        [saving-dialog-error-button] {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            height: 40px;
+            text-align: right;
+        }
+    </style>
+    <div tag="state-manager" component="absolute-state-manager" class="absolute-fill-parent">
+        <div tag="saving-message" name="saving-message" saving-dialog-saving-message class="absolute-fill-parent">
+            Saving....
+        </div>
+        <div tag="saved-message" name="saved-message" saving-dialog-saved-message class="absolute-fill-parent">
+            Saved Successully
+        </div>
+        <div tag="error" name="error" class="absolute-fill-parent">
+            <div tag="error-icon" saving-dialog-icon>
+                <i class="material-icons">&#xE001;</i>
+            </div>
+            <div tag="error-title" saving-dialog-error-title>An Error Occurred</div>
+            <div tag="error-message" saving-dialog-error-message></div>
+            <div saving-dialog-error-button>
+                <button tag="error-button" class="gem-button">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿<div floating-action-button controller="app.components.material.FloatingActionButton" unselectable>
+    <style component="css-helpers"></style>
+    <style component="css-material-icons"></style>
+    <style>
+        [floating-action-button] {
+            position: absolute;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        [floating-action-button-container] {
+            overflow: hidden;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    </style>
+    <i floating-action-button-icon tag="material-icon" class="material-icons" unselectable></i>
+    <div floating-action-button-container tag="container" class="absolute-fill-parent"></div>
+</div>

@@ -6,8 +6,8 @@ var env = require("../configs/environment/env");
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
-    username: String,
-    email: String,
+    username: { type: String, unique: true },
+    email: { type: String, unique: true },
     password: String,
     salt: String,
     firstName: String,

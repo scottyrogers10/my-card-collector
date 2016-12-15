@@ -1,0 +1,118 @@
+﻿<div hamburger-menu controller="app.components.layouts.HamburgerMenu">
+    <style component="css-helpers"></style>
+    <style component="css-material-icons"></style>
+    <style>
+        [hamburger-menu-header] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            line-height: 56px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #ddd;
+        }
+
+        [hamburger-menu-header-profile-image] {
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-image: url("../../../img/profile.jpg");
+            background-size: contain;
+        }
+
+        [hamburger-menu-header-title] {
+            position: absolute;
+            top: 0;
+            left: 64px;
+            font-size: 13px;
+            color: #757575;
+            font-weight: 500;
+        }
+
+        [hamburger-menu-close-button] {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            font-size: 28px;
+            width: 62px;
+            color: #757575;
+        }
+
+        [hamburger-menu-content-container] {
+            position: absolute;
+            top: 56px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        [hamburger-menu-item] {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 48px;
+            line-height: 48px;
+            box-sizing: border-box;
+            color: #757575;
+        }
+
+        [hamburger-menu-item-icon] {
+            position: absolute;
+            left: 20px;
+            font-size: 24px;
+        }
+
+        [hamburger-menu-item-label] {
+            position: absolute;
+            left: 64px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        [hamburger-menu-credit-text] {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 8px;
+            text-align: center;
+            font-size: 9px;
+            font-weight: 500;
+            color: #adadad;
+        }
+
+        [hamburger-menu] .selected-state {
+            background-color: #f2f2f2;
+            color: #1e88e5;
+        }
+    </style>
+    <div hamburger-menu-header>
+        <div hamburger-menu-header-profile-image></div>
+        <div hamburger-menu-header-title>Scotty Rogers</div>
+        <i hamburger-menu-close-button tag="menu-close-button" class="material-icons" unselectable>&#xE314;</i>
+    </div>
+    <div hamburger-menu-content-container>
+        <div hamburger-menu-item tag="home-button" class="selected-state" style="top: 0px;">
+            <i hamburger-menu-item-icon class="material-icons">&#xE88A;</i>
+            <div hamburger-menu-item-label>Home</div>
+        </div>
+        <div hamburger-menu-item tag="my-albums-button" style="top: 48px;">
+            <i hamburger-menu-item-icon class="material-icons">&#xE53B;</i>
+            <div hamburger-menu-item-label>My Albums</div>
+        </div>
+        <div hamburger-menu-item tag="profile-button" style="top: 96px;">
+            <i hamburger-menu-item-icon class="material-icons">&#xE7FD;</i>
+            <div hamburger-menu-item-label>Profile</div>
+        </div>
+        <div hamburger-menu-item tag="settings-button" style="top: 144px;">
+            <i hamburger-menu-item-icon class="material-icons">&#xE8B8;</i>
+            <div hamburger-menu-item-label>Settings</div>
+        </div>
+        <div hamburger-menu-credit-text>Created By: Scotty Rogers</div>
+    </div>
+</div>
